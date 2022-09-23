@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MisionTic2022</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script type="text/javascript" src="myScript.js"></script>
+<body>
+
+	<h1>Clientes!</h1>
+
+	Id de Cliente: <input type="number" id="idCliente"><br>
+	Nombre de Cliente: <input type="text" id="nombreCliente"><br>
+	Correo de Cliente: <input type="text" id="mailCliente"><br>
+	Edad de Cliente: <input type="number" id="edadCliente"><br>
+
+	<button onclick="guardarCliente()">GUARDAR CLIENTE</button>
+
+	<button onclick="editarCliente()">ACTUALIZAR CLIENTE</button>
+	<button onclick="leerClientes()">TRAER CLIENTES</button>
+
+	<div id="listaClientes">
+
+	</div>
+	<script type="text/javascript" src="myScriptCabañas.js"></script>
+	<h1>Cabañas!</h1>
+	Id de Cabaña: <input type="number" id="idCabaña"><br>
+	Brand Cabaña: <input type="text" id="brandCabaña"><br>
+	Rooms Cabaña: <input type="number" id="roomsCabaña"><br>
+	Category_id Cabaña: <input type="number" id="category_idCabaña"><br>
+	Nombre de Cabaña: <input type="text" id="nombreCabaña"><br>
+	
+	
+	<button onclick="guardarCabañas()">GUARDAR CABAÑA</button>
+
+	<button onclick="editarCabañas()">ACTUALIZAR CABAÑA</button>
+	<button onclick="leerCabañas()">TRAER CABAÑA</button>
+	
+	<div id="listaCabañas">
+
+	</div>
+
+</body>
+</html>

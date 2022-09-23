@@ -1,0 +1,39 @@
+1. CREACION DE LAS TABLAS 
+	CREATE TABLE CLIENT (
+    ID NUMBER NOT NULL,
+    NAME VARCHAR2(4000) NULL,
+    EMAIL VARCHAR2(20) NULL,
+    AGE NUMBER(10) NULL,
+    PRIMARY KEY (ID));
+
+	CREATE TABLE MESSAGE (
+    ID NUMBER NOT NULL,
+    MESSAGETEXT VARCHAR2(4000) NULL,
+    PRIMARY KEY (ID));
+
+2. GET
+	SELECT * FROM CLIENT
+3. POST
+	BEGIN
+    INSERT INTO CLIENT(ID, NAME, EMAIL, AGE)
+    VALUES(:id, :name, :email, :age);
+    :status_code := 201;
+	END;
+4. PUT
+	BEGIN
+    UPDATE CLIENT
+    SET
+    EMAIL = :email,
+    AGE = :age,
+    NAME = :name
+    WHERE ID = :id;
+    :status_code := 201;
+	END;
+5. DELETE
+	BEGIN
+    DELETE FROM CLIENT
+    WHERE ID = :id;
+    :status_code := 204;
+	END;
+
+URL:  https://gcb03291783e9d6-q8y7hi9e9jd8s635.adb.mx-queretaro-1.oraclecloudapps.com/ords/admin/client/client
