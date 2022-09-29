@@ -86,7 +86,7 @@ function editarMessages(){
 
 }
 
-function borrarMessages(idCliente){
+function borrarMessages(idMessage){
 	let data={
 		id:idMessage
 	};
