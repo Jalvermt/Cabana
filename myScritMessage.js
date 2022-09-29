@@ -62,6 +62,8 @@ function editarMessages(){
 	let data={
 		id:idMessage,
 		messagetext:mensaje
+		
+		
 		};
 
 	let dataToSend=JSON.stringify(data);
@@ -70,17 +72,18 @@ function editarMessages(){
 	    url : 'https://gcb03291783e9d6-q8y7hi9e9jd8s635.adb.mx-queretaro-1.oraclecloudapps.com/ords/admin/message/message',
 	    type : 'PUT',
 	 //   dataType : 'json',
-	    data:dataToSend,
-	    contentType:'application/json',
-	    success : function(pepito) {
-			$("#idMensaje").val("");
-			$("#mensaje").val("");
-	    },
-	    error : function(xhr, status) {
-	   //     alert('ha sucedido un problema');
-	    },
-	    complete: function(){
-	    	leerMessage();
+	 data:dataToSend,
+	 contentType:'application/json',
+	 success : function(pepito) {
+			$("#idMessage").val("");
+		 	$("#mensaje").val("");
+		 
+	 },
+	 error : function(xhr, status) {
+	//     alert('ha sucedido un problema');
+	 },
+	 complete: function(){
+		 leerMessage();
 	    }
 	});
 
